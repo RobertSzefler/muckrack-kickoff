@@ -1,2 +1,4 @@
 Django==2.0.1
 gunicorn==19.1.1
+newspaper3k==0.2.5
+requests==2.18.4

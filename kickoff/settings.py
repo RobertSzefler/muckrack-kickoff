@@ -12,6 +12,7 @@ ALLOWED_HOSTS = ['rsztest.eu-gb.mybluemix.net', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -101,6 +102,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-NLU_URL = 'https://gateway.watsonplatform.net/natural-language-understanding/api'
+NLU_URL = 'https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2017-02-27'
 NLU_USER = '7f5626da-8252-49c3-9108-1c7a5babfe6c'
 NLU_PASSWORD = '2WBktaVCnU5p'
