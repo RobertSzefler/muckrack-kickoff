@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+input[type="text"] {
+	width: 70em;
+}
+div {
+	margin-bottom: 1em;
+}
+div.result {
+	font-weight: bold;
+}
+pre {
+	color: #888;
+}
+</style>
+</head>
+<body>
+	<h1>The sentiment machine</h1>
+	<form action="." method="POST">
+		{% csrf_token %}
+		<div>
+		URL: <input type="text" name="url" value="{{ url }}"> <input type="submit">
+		</div>
+		{% if results %}
+		<div class="result">Sentiment: {{ sentiment_overall }} ({{ sentiment_score }})</pre></div>
+		<pre>{{ text }}</pre>
+		{% endif %}
+	</form>
+</body>
+</html>

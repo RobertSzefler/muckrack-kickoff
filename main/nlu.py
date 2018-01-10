@@ -6,7 +6,7 @@ import requests
 def compute_text_sentiment(text):
     """Compute the text's sentiment, using Watson NLU.
 
-    :param url: the URL from which the article should be downloaded.
+    :param text: the text to analyze.
     """
     request_payload = {
         'text': text,
